@@ -69,7 +69,7 @@ git clone https://github.com/raja03/nestjs-api.git
 - Run docker containers (DBs and Redis)
 
 ```console
-cd nestjs-api/.docker-node-api
+cd .docker-node-api
 chmod +x ./init-multi-postgres-databases.sh
 docker-compose up -d
 ```
@@ -104,16 +104,34 @@ npm start
 ## Workflow
 
 ### Register
+
 Use http://localhost:3000/users/register to create an user
 
+Example register user payload:
+
+```
+{
+    "typeId": 1, // 1 and 2 types are seeded already
+    "firstName": "Raja 1",
+    "lastName": "Test 1",
+    "email": "raja@test.com",
+    "password": "******",
+    "roles": [1, 2] // 1 and 2 roles are seeded already
+}
+```
+
 ### Login
+
 Use http://localhost:3000/users/login to login as the created user
 
 ### Authentication
+
 Pass JWT token in the Authorization header to access protected routes
 
+### Relationships
 
-
-
-
-
+```
+One to One: users and user details
+One to Many: users and user types
+Many to Many: users and user roles
+```
