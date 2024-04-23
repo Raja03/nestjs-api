@@ -5,7 +5,6 @@ This is a Nest.js REST API project.
 ## Features
 
 - [Dockerized local development](#dockerized-local-development)
-- [Configuration via ENV variables](#configuration-via-env-variables)
 - [Validation via DTO](#validation-via-dto)
 - [DB dynamic switching](#db-dynamic-switching)
 - [Redis cache](#redis-cache)
